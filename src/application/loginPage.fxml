@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #587e76;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginPageController">
+   <children>
+      <VBox layoutX="405.0" layoutY="287.0" prefHeight="146.0" prefWidth="470.0" spacing="30.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="462.0" spacing="92.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="77.0" text="Username:" textFill="#b9b9b9" />
+                  <TextField fx:id="usernameTextField" prefHeight="31.0" prefWidth="219.0" promptText="Πληκτολογίστε το Username" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="462.0" spacing="100.0">
+               <children>
+                  <Label text="Password:" textFill="#b9b9b9" />
+                  <PasswordField fx:id="passwordField" prefHeight="31.0" prefWidth="219.0" promptText="Πληκτρολογίστε το Password" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="554.0" layoutY="586.0" prefHeight="34.0" prefWidth="173.0" spacing="50.0">
+         <children>
+            <Button fx:id="exit" cancelButton="true" mnemonicParsing="false" onAction="#exitBtn" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="Exit" />
+            <Button fx:id="connectionBtn" mnemonicParsing="false" onAction="#getConnection" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #90EE90; -fx-background-radius: 100;" text="Login" />
+         </children>
+      </HBox>
+      <Label layoutX="464.0" layoutY="138.0" text="Συνδεθείτε στην Εφαρμογή" textFill="#b9b9b9">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="textDangerLbl" layoutX="388.0" layoutY="448.0" prefHeight="35.0" prefWidth="570.0" text="Εισάγετε σωστά τα username και password για να αποκτήσετε πρόσβαση στην εφαρμογή" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="signDangerLbl" layoutX="358.0" layoutY="449.0" prefHeight="31.0" prefWidth="25.0" text="⚠" textFill="WHITE" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

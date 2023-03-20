@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="orderManagementAnch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="994.0" prefWidth="1950.0" style="-fx-background-color: #587e76;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderManagementController">
+   <children>
+      <ScrollPane layoutX="42.0" layoutY="21.0" prefHeight="657.0" prefWidth="1868.0">
+         <content>
+            <TableView fx:id="orderTableView" editable="true" prefHeight="661.0" prefWidth="1848.0">
+              <columns>
+                <TableColumn fx:id="order_id" prefWidth="82.0" style="-fx-background-colour-: #b9b9b9;" text="ID" />
+                <TableColumn fx:id="order_date" prefWidth="242.99996948242188" text="Ημερομηνία" />
+                  <TableColumn fx:id="f_name" prefWidth="297.0" text="Όνομα" />
+                  <TableColumn fx:id="l_name" minWidth="0.0" prefWidth="262.0" text="Επώνυμο" />
+                  <TableColumn fx:id="phone_num" minWidth="7.0" prefWidth="233.0" text="Τηλέφωνο" />
+                  <TableColumn fx:id="address" minWidth="0.0" prefWidth="277.0" text="Διεύθυνση" />
+                  <TableColumn fx:id="total_price" prefWidth="165.0" text="Ποσό" />
+                  <TableColumn fx:id="fk_order_status_id" editable="false" prefWidth="288.0" text="Κατάσταση Παραγγελίας" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="deleteBtn" layoutX="1690.0" layoutY="891.0" mnemonicParsing="false" onAction="#deleteLine" style="-fx-background-color: red; -fx-background-radius: 100;" text="Διαγραφή Παραγγελίας" />
+      <ComboBox fx:id="orderStatusCombo" layoutX="250.0" layoutY="709.0" prefHeight="31.0" prefWidth="223.0" promptText="Κατάσταση Παραγγελίας" style="-fx-background-radius: 100;" />
+      <TextField fx:id="orderIdTextField" layoutX="45.0" layoutY="708.0" prefHeight="31.0" prefWidth="180.0" promptText="Πληκτρολογήστε το ID " style="-fx-background-radius: 100;" />
+      <Button fx:id="okBtn" layoutX="480.0" layoutY="709.0" mnemonicParsing="false" onAction="#changeOrderStatus" prefHeight="18.0" prefWidth="41.0" style="-fx-background-color: #90EE90; -fx-background-radius: 100;" text="ΟΚ" />
+      <Button fx:id="detailView" layoutX="1501.0" layoutY="891.0" mnemonicParsing="false" onAction="#orderDetailsView" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: #90EE90; -fx-background-radius: 100;" text="Αναλυτική Προβολή" />
+   </children>
+</AnchorPane>

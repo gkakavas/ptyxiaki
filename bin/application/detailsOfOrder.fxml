@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="826.0" prefWidth="824.0" style="-fx-background-color: #587e76;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.detailsOfOrderController">
+   <children>
+      <Label layoutX="61.0" layoutY="36.0" text="Στοιχεία Πελάτη" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="22.0" layoutY="82.0" prefHeight="454.0" prefWidth="555.0">
+         <children>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="34.0">
+               <children>
+                  <Label text="Όνομα" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fNameTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="14.0">
+               <children>
+                  <Label text="Επώνυμο" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lNameTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="10.0">
+               <children>
+                  <Label text="Επωνυμία" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="companyNameTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="12.0">
+               <children>
+                  <Label text="Διύθυνση" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addressTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="47.0">
+               <children>
+                  <Label text="Πόλη" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cityTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="24.0">
+               <children>
+                  <Label text="Περιοχή" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="regionTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="7.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="85.0" text="Ταχ. Κώδ." textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="zipTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="360.0" spacing="7.0">
+               <children>
+                  <Label text="Τηλέφωνο" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="56.0" prefWidth="360.0" spacing="41.0">
+               <children>
+                  <Label text="E-mail" textFill="#b9b9b9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTF" editable="false" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="547.0" layoutY="45.0" text="Καλάθι" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="376.0" layoutY="100.0" prefHeight="364.0" prefWidth="432.0">
+         <content>
+            <TableView fx:id="basketTableView" prefHeight="367.0" prefWidth="412.0">
+              <columns>
+                <TableColumn fx:id="productNameCol" prefWidth="201.33331298828125" text="Προϊόν" />
+                <TableColumn fx:id="unitPriceCol" prefWidth="101.66668701171875" text="Τιμή " />
+                  <TableColumn fx:id="quantityCol" prefWidth="104.0" text="Τεμάχια" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label layoutX="53.0" layoutY="586.0" text="Τρόπος Πληρωμής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="623.0" text="Κατάσταση Πληρωμής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="697.0" text="Κατάσταση Παραγγελίας" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="661.0" text="Τρόπος Αποστολής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="549.0" text="Ημερομηνία Παραγγελίας" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="733.0" text="Συνολική τιμή" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="771.0" text="Συνολικό ΦΠΑ" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderDateLbl" layoutX="438.0" layoutY="550.0" text="Ημερομηνία Παραγγελίας" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentTypeLbl" layoutX="440.0" layoutY="587.0" text="Τρόπος Πληρωμής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentStatusTf" layoutX="439.0" layoutY="626.0" text="Κατάσταση Πληρωμής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="deliveryTypeLbl" layoutX="440.0" layoutY="662.0" text="Τρόπος Αποστολής" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderStatusLbl" layoutX="440.0" layoutY="699.0" text="Κατάσταση Παραγγελίας" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalPriceLbl" layoutX="441.0" layoutY="738.0" text="Συνολική τιμή" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalVatLbl" layoutX="441.0" layoutY="773.0" text="Συνολικό ΦΠΑ" textFill="#b9b9b9">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

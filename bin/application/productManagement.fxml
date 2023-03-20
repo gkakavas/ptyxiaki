@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="productManagementAnch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="928.0" prefWidth="1950.0" style="-fx-background-color: #587e76;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProductManagementController">
+   <children>
+      <ScrollPane layoutX="24.0" layoutY="15.0" prefHeight="561.0" prefWidth="1902.0">
+         <content>
+            <TableView fx:id="productTableView" prefHeight="550.0" prefWidth="1882.0">
+              <columns>
+                <TableColumn fx:id="PRODUCT_ID" prefWidth="159.0" text="ID" />
+                <TableColumn fx:id="MANUFACTURER_CODE" prefWidth="203.0" text="Κωδικός Κατασκευαστή" />
+                  <TableColumn fx:id="PRODUCT_NAME" prefWidth="253.0" text="Όνομα" />
+                  <TableColumn fx:id="UNIT_PRICE" prefWidth="73.0" text="Τιμή " />
+                  <TableColumn fx:id="VAT" prefWidth="63.0" text="ΦΠΑ" />
+                  <TableColumn fx:id="WEIGHT" prefWidth="67.0" text="Βάρος " />
+                  <TableColumn fx:id="VOLUME" prefWidth="99.0" text="Όγκος" />
+                  <TableColumn fx:id="PRODUCT_TYPE" prefWidth="119.0" text="Τύπος " />
+                  <TableColumn fx:id="UNIT_DESCRIPTION" prefWidth="393.0" text="Περιγραφή " />
+                  <TableColumn fx:id="STOCK" prefWidth="99.0" text="Απόθεμα" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <RadioButton fx:id="chooseNewProductRB" layoutX="27.0" layoutY="600.0" mnemonicParsing="false" onAction="#chooseAddNewProduct" text="Προσθήκη Νεου Προϊόντος" textFill="#b9b9b9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="chooseAddStockRB" layoutX="24.0" layoutY="744.0" mnemonicParsing="false" onAction="#chooseAddStock" text="Προσθήκη Αποθέματος" textFill="#b9b9b9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="stockTF" layoutX="194.0" layoutY="804.0" prefHeight="31.0" prefWidth="274.0" promptText="Αριθμός Προστιθέμενου Αποθέματος" style="-fx-background-radius: 100;" />
+      <Button fx:id="addStockBtn" layoutX="1726.0" layoutY="862.0" mnemonicParsing="false" onAction="#addStock" style="-fx-background-color: #90EE90; -fx-background-radius: 100;" text="Προσθήκη Αποθέματος" />
+      <Button fx:id="addNewProductBtn" layoutX="1441.0" layoutY="862.0" mnemonicParsing="false" onAction="#addNewProduct" style="-fx-background-color: #90EE90; -fx-background-radius: 100;" text="Προσθήκη Νέου Προϊόντος" />
+      <TextField fx:id="pruductIdTF" layoutX="29.0" layoutY="804.0" prefHeight="31.0" prefWidth="140.0" promptText=" ID Προϊόντος" style="-fx-background-radius: 100;" />
+      <Button fx:id="deleteBtn" layoutX="26.0" layoutY="864.0" mnemonicParsing="false" onAction="#deleteProduct" style="-fx-background-color: red; -fx-background-radius: 100;" text="Διαγραφή Προϊόντος" />
+      <VBox layoutX="27.0" layoutY="642.0" prefHeight="96.0" prefWidth="1496.0">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="1496.0" spacing="40.0">
+               <children>
+                  <Label text="Κωδικός Κατασκευαστή" textFill="#b9b9b9" />
+                  <TextField fx:id="manufacturerCodeTF" style="-fx-background-radius: 100;" />
+                  <Label text="Όνομα" textFill="#b9b9b9" />
+                  <TextField fx:id="productNameTF" style="-fx-background-radius: 100;" />
+                  <Label text="Τιμή " textFill="#b9b9b9" />
+                  <TextField fx:id="unitPriceTF" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 100;" />
+                  <Label text="ΦΠΑ" textFill="#b9b9b9" />
+                  <TextField fx:id="vatTF" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 100;" />
+                  <Label text="Βάρος " textFill="#b9b9b9" />
+                  <TextField fx:id="weightTF" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="1496.0" spacing="50.0">
+               <children>
+                  <Label text="Τύπος " textFill="#b9b9b9" />
+                  <TextField fx:id="typeTF" prefHeight="31.0" prefWidth="173.0" style="-fx-background-radius: 100;" />
+                  <Label text="Περιγραφή " textFill="#b9b9b9" />
+                  <TextField fx:id="descriptionTF" style="-fx-background-radius: 100;" />
+                  <Label text="Όγκος" textFill="#b9b9b9" />
+                  <TextField fx:id="volumeTF" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 100;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
